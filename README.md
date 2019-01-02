@@ -1,2 +1,2 @@
 # jezyk-fronend-app
-Vue.js + axios
+Frontend app for jezyq
