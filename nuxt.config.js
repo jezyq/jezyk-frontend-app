@@ -3,17 +3,22 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
-  /*
-   ** Headers of the page
-   */
   head: {
-    title: pkg.name,
+    title: 'Jeżyq - społeczność wolnościowa',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
+      { hid: 'description', name: 'description', content: pkg.description },
+      { property: 'og:title', content: 'Jeżyq - społeczność wolnościowa' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: '//jezyq.org.pl' },
+      { property: 'og:description', content: 'Społeczność wolnościowa' },
+      { property: 'og:image', content: '//jezyq.org.pl/facebook.jpg' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Rufina:400,700&amp;subset=latin-ext' }
+    ]
   },
 
   /*
@@ -24,7 +29,9 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/assets/css/base.css',
+  ],
 
   /*
    ** Plugins to load before mounting the App
