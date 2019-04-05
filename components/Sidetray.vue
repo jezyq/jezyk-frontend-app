@@ -5,7 +5,7 @@
         <a href="#">
           <i>
             <svg viewBox="0 0 24 24">
-              <use xlink:href="images/ui-icons.svg#close-icon"></use>
+              <use xlink:href="/ui-icons.svg#close-icon"></use>
             </svg>
           </i>
         </a>
@@ -58,7 +58,7 @@
               <button id="searchsubmit" class="search-button" type="submit">
                 <i class="icon-search">
                   <svg class="" viewBox="0 0 32 32">
-                    <use xlink:href="images/ui-icons.svg#search-icon"></use>
+                    <use xlink:href="/ui-icons.svg#search-icon"></use>
                   </svg>
                 </i>
               </button>
@@ -105,9 +105,7 @@
               <button class="submit-btn" type="submit">
                 <i>
                   <svg class="" viewBox="0 0 25 10">
-                    <use
-                      xlink:href="images/ui-icons.svg#arrow-right-icon"
-                    ></use>
+                    <use xlink:href="/ui-icons.svg#arrow-right-icon"></use>
                   </svg>
                 </i>
               </button>
@@ -142,9 +140,7 @@
                 <a href="#" class="facebook">
                   <i>
                     <svg viewBox="0 0 32 32">
-                      <use
-                        xlink:href="images/social-icons.svg#facebook-icon"
-                      ></use>
+                      <use xlink:href="/social-icons.svg#facebook-icon"></use>
                     </svg>
                   </i>
                   Facebook
@@ -154,9 +150,7 @@
                 <a href="#" class="twitter">
                   <i>
                     <svg viewBox="0 0 32 32">
-                      <use
-                        xlink:href="images/social-icons.svg#twitter-icon"
-                      ></use>
+                      <use xlink:href="/social-icons.svg#twitter-icon"></use>
                     </svg>
                   </i>
                   Twitter
@@ -166,9 +160,7 @@
                 <a href="#" class="youtube">
                   <i>
                     <svg viewBox="0 0 32 32">
-                      <use
-                        xlink:href="images/social-icons.svg#youtube-icon"
-                      ></use>
+                      <use xlink:href="/social-icons.svg#youtube-icon"></use>
                     </svg>
                   </i>
                   Youtube

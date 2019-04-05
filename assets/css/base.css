@@ -2960,6 +2960,12 @@ tfoot {
     visibility: visible;
     opacity: .9;
 }
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
 
 /*--------------------------------------------------------------
 /** 12. Header
@@ -3153,6 +3159,7 @@ tfoot {
   color: rgba(0,0,0,0.5);
 }
 .filter-dropdown {
+  border-radius: 5px;
   background-color: #121212;
   visibility: hidden;
   position: absolute;
@@ -3174,7 +3181,7 @@ tfoot {
   content: '';
   position: absolute;
   top: -5px;
-  left: 15px;
+  left: 50%;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;

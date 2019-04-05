@@ -2,24 +2,32 @@
   <header id="header">
     <div id="header-wrap">
       <div class="container">
-        <nav class="filter">
-          <span class="cat-filter">
+        <nav class="filter" :class="{ 'nav-is-visible': isCatsVisible }">
+          <span class="cat-filter" @click="openCats">
             <span class="filter-text">Kategoria :&nbsp;</span>
-            <span class="filter-by">Wszystkie</span>
+            <span class="filter-by">Wybierz</span>
           </span>
           <div class="filter-dropdown">
             <ul class="filter-items">
-              <li class="active"><a href="/">Strona główna</a></li>
-              <li><a href="/newsy">Newsy</a></li>
-              <li><a href="/video">Video</a></li>
-              <li><a href="/wywiady">Wywiady</a></li>
-              <li><a href="/politycy">Politycy</a></li>
+              <li class="active-x">
+                <nuxt-link to="/">Strona główna</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/newsy">Newsy</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/video">Video</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/wywiady">Wywiady</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/politycy">Politycy</nuxt-link>
+              </li>
             </ul>
           </div>
         </nav>
-        <!-- / CATEGORIES FILTER -->
 
-        <!-- LOGO -->
         <h1 id="logo">
           <a href="/" title="Jeżyq">
             <img
@@ -30,53 +38,70 @@
             />
           </a>
         </h1>
-        <!-- / LOGO -->
 
-        <!-- HEADER ACTIONS -->
         <div class="actions">
           <div class="actions-wrap">
-            <!-- Newsletter -->
             <div class="newsletter">
-              <a href="#" class="nl-popup-trigger">
+              <a href="#" class="nl-popup-trigger" @click="openNewsletter()">
                 <span class="icon-envelope">
                   <svg class="" viewBox="0 0 32 22">
-                    <use xlink:href="images/ui-icons.svg#envelope-icon"></use>
+                    <use xlink:href="/ui-icons.svg#envelope-icon"></use>
                   </svg>
                 </span>
                 <span class="tooltip">Newsletter</span>
               </a>
             </div>
-            <!-- / Newsletter -->
 
-            <!-- Search -->
             <div class="search">
-              <a href="#" class="search-popup-trigger">
+              <a href="#" class="search-popup-trigger" @click="openSearch()">
                 <span class="icon-search">
                   <svg class="" viewBox="0 0 32 32">
-                    <use xlink:href="images/ui-icons.svg#search-icon"></use>
+                    <use xlink:href="/ui-icons.svg#search-icon"></use>
                   </svg>
                 </span>
                 <span class="tooltip">Wyszukaj</span>
               </a>
             </div>
-            <!-- / Search -->
 
-            <!-- Navigation -->
             <div class="menu-btn">
-              <a id="mobile-menu-trigger" href="#">
+              <a id="mobile-menu-trigger" href="#" @click="openNav()">
                 <span class="icon-menu">
                   <svg class="" viewBox="0 0 26 20">
-                    <use xlink:href="images/ui-icons.svg#hamburger-icon"></use>
+                    <use xlink:href="/ui-icons.svg#hamburger-icon"></use>
                   </svg>
                 </span>
                 <span class="tooltip">Menu</span>
               </a>
             </div>
-            <!-- / Navigation -->
           </div>
         </div>
-        <!-- / HEADER ACTIONS -->
       </div>
     </div>
   </header>
 </template>
+
+<script>
+// import { mapMutations } from 'vuex'
+
+export default {
+  computed: {
+    isCatsVisible() {
+      return this.$store.state.categoriesVisible
+    }
+  },
+  methods: {
+    openCats(e) {
+      this.$store.commit('toggleCategories', !this.isCatsVisible)
+    },
+    openNewsletter() {
+      this.$store.commit('toggleNewsletter', true)
+    },
+    openSearch() {
+      this.$store.commit('toggleSearch', true)
+    },
+    openNav() {
+      this.$store.commit('toggleNav', true)
+    }
+  }
+}
+</script>
