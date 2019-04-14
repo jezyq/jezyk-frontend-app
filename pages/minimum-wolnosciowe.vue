@@ -38,7 +38,7 @@
                 <hr class="sep accent" />
                 <p>II. BROŃ - ułatwienie dostępu</p>
                 <hr class="sep accent" />
-                <p>III. DECENTRALIZACJA - większe autonomia samorządu</p>
+                <p>III. DECENTRALIZACJA - większa autonomia samorządu</p>
                 <hr class="sep accent" />
                 <p>IV. DEREGULACJA - usunięcie idiotycznych przepisów</p>
                 <hr class="sep accent" />

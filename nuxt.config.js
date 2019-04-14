@@ -7,7 +7,11 @@ module.exports = {
     title: 'Jeżyq - społeczność wolnościowa',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
+      {
+        name: 'viewport',
+        content:
+          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+      },
       { hid: 'description', name: 'description', content: pkg.description },
       { property: 'og:title', content: 'Jeżyq - społeczność wolnościowa' },
       { property: 'og:type', content: 'website' },
@@ -17,7 +21,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Rufina:400,700&amp;subset=latin-ext' }
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Rufina:400,700&amp;subset=latin-ext'
+      }
     ],
     script: []
   },
@@ -30,9 +38,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [
-    '@/assets/css/base.css',
-  ],
+  css: ['@/assets/css/base.css'],
 
   /*
    ** Plugins to load before mounting the App

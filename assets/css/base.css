@@ -5988,6 +5988,7 @@ nav.pagination .col-pages>.current::after {
 .single-post .post-content .wp-caption,
 .single-post .post-content .gallery,
 .single-post .post-content .image-holder {
+  position: relative;
   margin: 5em -7.5em;
 }
 .single-post .post-content .image-holder {

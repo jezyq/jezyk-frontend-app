@@ -20,8 +20,8 @@
         <div class="form-group">
           <input
             id="input-email-signup"
-            class="form-control"
             v-model="email"
+            class="form-control"
             type="email"
             name="EmailAddress"
             value=""
